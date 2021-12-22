@@ -8,17 +8,39 @@
   src: url(fonts/Lato/Lato-Regular.ttf);
 }
 
+@font-face {
+  font-family: latoBold;
+  src: url(fonts/Lato/Lato-Bold.ttf);
+}
+
 body {
   margin: 0;
   padding: o;
 }
 
+header {
+  position: absolute;
+}
+
 nav {
-  background-color: black;
+  padding-left: 20px;
   height: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.hamburger-menu {
+  border: 1px solid #272a31;
+  background-color: #272a3186;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.hamburger-menu:hover{
+  background-color: #ec5242;
+  border: 3px;
+  box-shadow: 0 4px 8px 0 rgb(236 82 66 / 60%), 0 6px 20px 0 rgb(236 82 66 / 19%);
 }
 
 nav ul#menu {
@@ -31,6 +53,7 @@ nav ul#menu {
 }
 
 nav ul#menu li{
+  display: none;
   color: white;
   font-family: lato;
   opacity: .5;
@@ -59,23 +82,28 @@ nav ul#menu li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 
 .home-text {
-  background-color: rgba(255, 255, 255, 0.199);
+  background-color: #d3d3d39f;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  gap: 20px;
+  gap: 37px;
+  padding-bottom: 20px;
+}
+
+.home-text h1,
+.home-text p {
+  max-width: 500px;
 }
 
 h1 {
   margin: 0;
-  color: black;
+  color: #ec5242;
   font-family: cocogoose;
   font-size: 50px;
   width: 98%;
@@ -84,13 +112,21 @@ h1 {
 
 h2 {
   margin: 0;
-  color: #ec5242;
+  color: #272a31;
   font-family: lato;
   font-size: 30px;
 }
 
+.home-text p {
+  width: 70%;
+  color: #272a31;
+  font-size: 20px;
+  border: 1px solid #fff;
+  padding: 5px;
+}
+
 .button {
-  background-color: black;
+  background-color: #ec5242;
   font-family: lato;
   padding: 20px 12px;
   border-radius: 10%;
@@ -101,11 +137,21 @@ h2 {
 }
 
 .button:hover {
-  background-color: tomato;
+  border: 3px solid #ec5242;
+  background-color: #272a31;
+  box-shadow: 0 4px 8px 0 rgb(236 82 66 / 60%), 0 6px 20px 0 rgb(236 82 66 / 19%);
+}
+
+.home-text .button {
+  width: 60%;
 }
 
 .about {
   background-color: #272a31;
+  background-image: url(assets/Roulette70.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 500px;
   display: flex;
@@ -116,25 +162,48 @@ h2 {
 }
 
 .about h2 {
-  font-family: cocogoose;
-  font-size: 28px;
+  width: 100%;
+  max-width: 450px;
+  font-family: latoBold;
+  font-size: 36px;
   text-align: center;
   width: 95%;
   color: #fff;
 }
 
+hr {
+  width: 40px;
+  border-color: #ec5242;
+}
+
+.about div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 25px;
+  background-color: #d3d3d341;
+  width: 90%;
+  max-width: 450px;
+  height: 40%;
+}
+
 p {
   margin: 0;
-  color: aliceblue;
+  color: #ec5242;
   font-family: lato;
-  font-size: 17px;
+  font-size: 24px;
+}
+
+.about div p {
+  color: #d3d3d3;
 }
 
 .about ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 90%;
+  width: 100%;
   height: auto;
   display: flex;
   gap: 20px;
@@ -142,7 +211,7 @@ p {
 }
 
 .courses-container {
-  background-color: #d3d3d3;
+  background-color: #fff;
   width: 100%;
   height: auto;
   padding: 30px 0;
@@ -152,17 +221,35 @@ p {
   align-items: center;
 }
 
-.courses {
-  width: 90%;
-  background-color: #d4d4d4;
+.courses-container h1 {
+  font-family: latoBold;
+  font-size: 33px;
+  color: #272a31;
+}
+
+.courses,
+.math,
+.physics,
+.chemistry {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  padding: 30px 0;
+}
+
+.math,
+.physics,
+.chemistry {
+  background: -webkit-linear-gradient(#fff, #d3d3d3);
+  background:    -moz-linear-gradient(#fff, #d3d3d3);
+  background:         linear-gradient(#fff, #d3d3d3);
 }
 
 .card {
-  width: 90%;
+  width: 80%;
+  max-width: 350px;
   height: 100px;
   border-radius: 10px;
   background-image: url(assets/IMG_1041.JPG);
@@ -170,12 +257,21 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid #272a31;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 60%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  transition: 0.5s;
+}
+
+.card:hover {
+  border: 3px solid #ec5242;
+  height: 300px;
+  box-shadow: 0 4px 8px 0 rgb(236 82 66 / 60%), 0 6px 20px 0 rgb(236 82 66 / 19%);
 }
 
 .card h2 {
   color: #272a31;
   padding-left: 10px;
-  padding-top: 10px;
+  padding-top: 5px;
+  font-size: 25px;
 }
 
 .background-card {
@@ -183,11 +279,17 @@ p {
   height: 100%;
   background-color: #d3d3d3ab;
   border-radius: 10px;
+  transition: 0.5s;
+}
+
+.background-card:hover {
+  background-color:#d3d3d300;
 }
 
 .button-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   gap: 10px;
 }
@@ -201,18 +303,83 @@ p {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  background-image: url(assets/IncessantBlabber-Stylized-atom.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-suggestion {
+  padding: 10px 0;
+  min-height: 700px;
+  height: auto;
+}
+
+.all-courses {
+  background-image: url(assets/toluene.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contact-container h2{
   font-family: cocogoose;
+  color: #ec5242;
+  text-align: center;
+  width: 90%;
+}
+
+.contact-container p {
+  text-align: center;
 }
 
 .form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
+}
+
+input,
+textarea {
+  width: 90%;
+  border: 0;
+  border-bottom: 3px solid #ec5242;
+  padding: 5%;
+  margin-bottom: 20px;
+  font-family: lato, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #979493;
+}
+
+.contact-container p {
+  color: #d3d3d3;
 }
 
 #button {
   color: #fff;
+  width: 100%;
+}
+
+.author{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #272a31;
+  padding: 20px 0;
+} 
+
+.author p {
+  font-size: 12px;
+  color: #d3d3d3;
 }
