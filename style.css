@@ -338,6 +338,7 @@ p {
   align-items: center;
   width: 100%;
   gap: 10px;
+  order: 1;
 }
 
 .contact-container {
@@ -637,5 +638,4 @@ textarea::placeholder {
   .author .logo {
     order: 0;
   }
-
 }
