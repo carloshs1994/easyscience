@@ -11,20 +11,30 @@
 </head>
 <body>
   <header>
+    <section class="social-network">
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#">Español</a></li>
+      </ul>
+    </section>
     <nav>
+      <div class="logo"><p>Easy Science</p></div>
       <div class="hamburger-menu"><img src="assets/hamburger-menu.png" alt="menu"></div>
       <ul id="menu">
-        <li class="logo"></li>
         <li class="closeButtonContainer"><span id="closeButton">X</span></li>
+        <li><a class="Personal-information" href="courses.html">Courses</a></li>
         <li><a class="Personal-information" href="#about">About</a></li>
-        <li><a class="Personal-information" href="#courses">Courses</a></li>
         <li><a class="Personal-information" href="#contact">Contact</a></li>
+        <li><a class="button sign-up" href="#">Sign up</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section class="contact-container all-courses">
+      <hr>
       <h1>Find the course for you</h1>
+      <hr>
     </section>
     <section class="math">
       <h1>Math</h1>
@@ -93,17 +103,21 @@
       </article>
     </section>
     <section class="contact-container form-suggestion">
-      <h2>Didn't find the course for you?</h2>
-      <p>We add new courses all the time but we'll appreciate it if you tell us which one are you interested in</p>
-      <hr>
-      <form id="form" class="form" action="#" method="post">
-        <input type="text" id="name" name="user-name" placeholder="Full Name" required maxlength="30">
-        <input type="email" id="email" name="user-email" placeholder="Email Address" required>
-        <textarea name="message" id="msg" maxlength="500" placeholder="Suggest a course" required></textarea>
-        <button id="button" class="button" type="submit">Get in Touch</button>
-      </form>
-      <p>or</p>
-      <a class="button" href="#">Sign up</a>
+      <div class="contact-text">
+        <h2>Didn't find the course for you?</h2>
+        <p>We add new courses all the time but we'll appreciate it if you tell us which one are you interested in</p>
+        <hr>
+      </div>
+      <div class="contact-form">
+        <form id="form" class="form" action="#" method="post">
+          <input type="text" id="name" name="user-name" placeholder="Full Name" required maxlength="30">
+          <input type="email" id="email" name="user-email" placeholder="Email Address" required>
+          <textarea name="message" id="msg" maxlength="500" placeholder="Suggest a course" required></textarea>
+          <button id="button" class="button" type="submit">Get in Touch</button>
+        </form>
+        <p>or</p>
+        <a class="button" href="#">Sign up</a>
+      </div>
     </section>
     <section class="author">
       <p>copyright© 2021 easyscience.com</p>

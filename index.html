@@ -11,14 +11,22 @@
 </head>
 <body>
   <header>
-    <div class="logo"></div>
+    <section class="social-network">
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#">Español</a></li>
+      </ul>
+    </section>
     <nav>
+      <div class="logo"><p>Easy Science</p></div>
       <div class="hamburger-menu"><img src="assets/hamburger-menu.png" alt="menu"></div>
       <ul id="menu">
         <li class="closeButtonContainer"><span id="closeButton">X</span></li>
+        <li><a class="Personal-information" href="courses.html">Courses</a></li>
         <li><a class="Personal-information" href="#about">About</a></li>
-        <li><a class="Personal-information" href="#courses">Courses</a></li>
         <li><a class="Personal-information" href="#contact">Contact</a></li>
+        <li><a class="button sign-up" href="#">Sign up</a></li>
       </ul>
     </nav>
   </header>
@@ -26,7 +34,7 @@
     <section class="home-page">
         <div class="home-text">
           <h1>We teach science the right way</h1>
-          <p>We have the mission to provide a free, world-class education for anyone, anywhere.</p>
+          <p>We have the mission to provide a world-class education for anyone, anywhere.</p>
           <a class="button" href="courses.html">Start here</a>
         </div>
     </section>
@@ -36,9 +44,9 @@
       <div>
         <p>Start with:</p>
         <ul>
-          <li><a class="button" href="#">Math   <i class="fas fa-square-root-alt"></i></a></li>
-          <li><a class="button" href="#">Physics   <i class="fas fa-atom"></i></a></li>
-          <li><a class="button" href="#">Chemistry   <i class="fas fa-flask"></i></a></li>
+          <li class="button"><a href="#">Math   <i class="fas fa-square-root-alt"></i></a></li>
+          <li class="button"><a href="#">Physics   <i class="fas fa-atom"></i></a></li>
+          <li class="button"><a href="#">Chemistry   <i class="fas fa-flask"></i></a></li>
         </ul>
       </div>
     </section>
@@ -65,21 +73,26 @@
           <div class="background-card"><h2>Forces</h2></div>
         </article>
         <div class="button-container">
-          <a class="button" href="#">Show more   <i class="fas fa-arrow-down"></i></a>
+          <a class="button show-more" href="#">Show more   <i class="fas fa-arrow-down"></i></a>
           <a class="button" href="courses.html">Find more courses   <i class="fas fa-book-reader"></i></a>
         </div>
       </section>
     </section>
     <section id="contact" class="contact-container">
-      <h2>Need a tutor?</h2>
-      <p>Contact us for a personalized class</p>
-      <form id="form" class="form" action="#" method="post">
-        <input type="text" id="name" name="user-name" placeholder="Full Name" required maxlength="30">
-        <input type="email" id="email" name="user-email" placeholder="Email Address" required>
-        <button id="button" class="button" type="submit">Get in Touch</button>
-      </form>
-      <p>or</p>
-      <a class="button" href="#">Sign up</a>
+      <div class="contact-text">
+        <h2>Need a tutor?</h2>
+        <p>Contact us for a personalized class</p>
+        <hr>
+      </div>
+      <div class="contact-form">
+        <form id="form" class="form" action="#" method="post">
+          <input type="text" id="name" name="user-name" placeholder="Full Name" required maxlength="30">
+          <input type="email" id="email" name="user-email" placeholder="Email Address" required>
+          <button id="button" class="button" type="submit">Get in Touch</button>
+        </form>
+        <p>or</p>
+        <a class="button" href="#">Sign up</a>
+      </div>
     </section>
   </main>
 </body>
