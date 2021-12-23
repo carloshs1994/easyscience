@@ -44,6 +44,11 @@ nav {
   display: none;
 }
 
+strong {
+  font-family: latoBold;
+  font-size: 35px;
+}
+
 .hamburger-menu {
   border: 1px solid #272a31;
   background-color: #272a3186;
@@ -57,33 +62,47 @@ nav {
   box-shadow: 0 4px 8px 0 rgb(236 82 66 / 60%), 0 6px 20px 0 rgb(236 82 66 / 19%);
 }
 
-.social-network ul,
-nav ul#menu {
+nav ul {
+  position: fixed;
+  top: 0; 
+  left: -150%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #272a31;
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 20px;
-  justify-content: space-evenly;
-}
-
-.social-network ul {
-  width: 80%;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 80px;
+  transition: 0.5s;
 }
 
-.social-network ul li a{
-  font-family: lato;
-  color: #d3d3d3;
-}
-
-nav ul#menu li {
-  display: none;
+nav ul li {
   color: white;
   font-family: lato;
-  opacity: .5;
-  transition: .5s;
+  opacity: .6;
+  transition: 1s;
+  border-bottom: 3px solid #ec5242;
+}
+
+nav ul li a {
+  font-family: latoBold;
+  font-size: 30px;
+}
+
+.closeButtonContainer {
+  border-bottom: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 25px;
+}
+
+.visible {
+  left: 0;
 }
 
 a {
@@ -92,7 +111,7 @@ a {
 } 
 
 a:hover,
-nav ul#menu li:hover {
+nav ul li:hover {
   opacity: 1;
 }
 
@@ -214,6 +233,7 @@ hr {
   height: 40%;
 }
 
+.logo a,
 p {
   margin: 0;
   color: #ec5242;
@@ -430,6 +450,11 @@ textarea::placeholder {
   color: #d3d3d3;
 }
 
+.author .logo {
+  order: -1;
+  display: block;
+}
+
 @media (min-width: 768px) {
   header {
     position: static;
@@ -440,8 +465,37 @@ textarea::placeholder {
     position: static;
   }
 
+  .social-network ul,
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+  }
+
+  .social-network ul {
+    width: 80%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .social-network ul li a{
+    font-family: lato;
+    color: #d3d3d3;
+  }
+
   nav {
     justify-content: space-evenly;
+  }
+
+  nav ul {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    background-color: #fff;
   }
 
   .hamburger-menu,
@@ -454,10 +508,16 @@ textarea::placeholder {
     display: block;
   }
 
-  nav ul#menu li {
+  nav ul li {
     display: block;
     opacity: 0.5;
     transition: 0.5s;
+    border-bottom: none;
+  }
+
+  nav ul li a {
+    font-family: lato;
+    font-size: 20px;
   }
 
   a {
@@ -568,4 +628,14 @@ textarea::placeholder {
     width: 100%;
     height: 30px;
   } 
+
+  .author {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .author .logo {
+    order: 0;
+  }
+
 }
