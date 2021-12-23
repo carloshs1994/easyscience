@@ -19,8 +19,8 @@
 }
 
 body {
-  margin: 0;
-  padding: o;
+  margin: 0.0001px;
+  padding: 0.0001px;
 }
 
 header {
@@ -50,7 +50,7 @@ nav {
 }
 
 strong {
-  font-family: latoBold;
+  font-family: latoBold, Arial, Helvetica, sans-serif;
   font-size: 35px;
 }
 
@@ -61,7 +61,7 @@ strong {
   border-radius: 3px;
 }
 
-.hamburger-menu:hover{
+.hamburger-menu:hover {
   background-color: #ec5242;
   border: 3px;
   box-shadow: 0 4px 8px 0 rgb(236 82 66 / 60%), 0 6px 20px 0 rgb(236 82 66 / 19%);
@@ -69,7 +69,7 @@ strong {
 
 nav ul {
   position: fixed;
-  top: 0; 
+  top: 0;
   left: -150%;
   width: 100vw;
   height: 100vh;
@@ -83,18 +83,29 @@ nav ul {
   align-items: center;
   gap: 80px;
   transition: 0.5s;
+  z-index: 2;
 }
 
 nav ul li {
   color: white;
-  font-family: lato;
-  opacity: .6;
+  font-family: lato, Arial, Helvetica, sans-serif;
+  opacity: 0.6;
   transition: 1s;
   border-bottom: 3px solid #ec5242;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+nav ul li:hover {
+  opacity: 1;
+}
+
 nav ul li a {
-  font-family: latoBold;
+  font-family: latoBold, Arial, Helvetica, sans-serif;
   font-size: 30px;
 }
 
@@ -110,14 +121,12 @@ nav ul li a {
   left: 0;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-} 
-
-a:hover,
-nav ul li:hover {
-  opacity: 1;
+.logo a,
+p {
+  margin: 0;
+  color: #ec5242;
+  font-family: lato;
+  font-size: 24px;
 }
 
 .home-page {
@@ -146,15 +155,10 @@ nav ul li:hover {
   padding-bottom: 20px;
 }
 
-.home-text h1,
-.home-text p {
-  max-width: 500px;
-}
-
 h1 {
   margin: 0;
   color: #ec5242;
-  font-family: cocogoose;
+  font-family: cocogoose, Arial, Helvetica, sans-serif;
   font-size: 50px;
   width: 98%;
   text-align: center;
@@ -163,8 +167,13 @@ h1 {
 h2 {
   margin: 0;
   color: #272a31;
-  font-family: lato;
+  font-family: lato, Arial, Helvetica, sans-serif;
   font-size: 30px;
+}
+
+.home-text h1,
+.home-text p {
+  max-width: 500px;
 }
 
 .home-text p {
@@ -177,7 +186,7 @@ h2 {
 
 .button {
   background-color: #ec5242;
-  font-family: lato;
+  font-family: lato, Arial, Helvetica, sans-serif;
   padding: 20px 12px;
   border-radius: 10%;
   border: 1px solid white;
@@ -212,9 +221,8 @@ h2 {
 }
 
 .about h2 {
-  width: 100%;
   max-width: 450px;
-  font-family: latoBold;
+  font-family: latoBold, Arial, Helvetica, sans-serif;
   font-size: 36px;
   text-align: center;
   width: 95%;
@@ -238,12 +246,9 @@ hr {
   height: 40%;
 }
 
-.logo a,
-p {
-  margin: 0;
-  color: #ec5242;
-  font-family: lato;
-  font-size: 24px;
+.contact-container p {
+  text-align: center;
+  color: #d3d3d3;
 }
 
 .about div p {
@@ -273,7 +278,7 @@ p {
 }
 
 .courses-container h1 {
-  font-family: latoBold;
+  font-family: latoBold, Arial, Helvetica, sans-serif;
   font-size: 33px;
   color: #272a31;
 }
@@ -294,8 +299,8 @@ p {
 .physics,
 .chemistry {
   background: -webkit-linear-gradient(#fff, #d3d3d3);
-  background:    -moz-linear-gradient(#fff, #d3d3d3);
-  background:         linear-gradient(#fff, #d3d3d3);
+  background: -moz-linear-gradient(#fff, #d3d3d3);
+  background: linear-gradient(#fff, #d3d3d3);
 }
 
 .card {
@@ -332,7 +337,14 @@ p {
 }
 
 .background-card:hover {
-  background-color:#d3d3d300;
+  background-color: #d3d3d300;
+}
+
+.contact-container h2 {
+  font-family: cocogoose, Arial, Helvetica, sans-serif;
+  color: #ec5242;
+  text-align: center;
+  width: 90%;
 }
 
 .card .background-card h2 {
@@ -350,7 +362,7 @@ p {
 .card:hover > .background-card > .display-while-hover {
   display: block;
   font-size: 15px;
-  font-family: latoItalic;
+  font-family: latoItalic, Arial, Helvetica, sans-serif;
   width: 90%;
   color: #272a31;
   opacity: 0.9;
@@ -360,7 +372,7 @@ p {
 
 .card:hover > .background-card > a.display-while-hover:hover {
   font-size: 20px;
-  font-family: latoBold;
+  font-family: latoBold, Arial, Helvetica, sans-serif;
   opacity: 1;
 }
 
@@ -420,17 +432,6 @@ p {
   background-size: cover;
 }
 
-.contact-container h2{
-  font-family: cocogoose;
-  color: #ec5242;
-  text-align: center;
-  width: 90%;
-}
-
-.contact-container p {
-  text-align: center;
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -459,10 +460,6 @@ textarea {
 input::placeholder,
 textarea::placeholder {
   color: #979493;
-}
-
-.contact-container p {
-  color: #d3d3d3;
 }
 
 #button {

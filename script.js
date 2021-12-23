@@ -10,7 +10,7 @@ closeMenu.addEventListener('click', openAndClose);
 closeNavLink.forEach((element) => {
   element.addEventListener('click', openAndClose);
 });
-//-------------------------------------------Array of Courses
+//  -------------------------------------------Array of Courses
 const arrOfFavoriteCourses = [
   {
     title: 'Algebra 1',
@@ -41,10 +41,10 @@ const arrOfFavoriteCourses = [
     title: "Newton's laws",
     content: "Content: Newton's first law, Newton's third law and free body-diagrams, Newton's second law, Applications of Newton's second law",
     linkToCompleteCourse: '#',
-  }
+  },
 ];
 
-const favoriteCourse = arrOfFavoriteCourses.map((element, index) => {
+const favoriteCourse = arrOfFavoriteCourses.map((element) => {
   const course = document.createElement('article');
   course.className = 'card';
   course.innerHTML = `
@@ -57,6 +57,6 @@ const favoriteCourse = arrOfFavoriteCourses.map((element, index) => {
   return course;
 });
 const createFavoriteCourses = document.getElementById('courses-wrap');
-for (let i = 0; i<favoriteCourse.length; i += 1){
+for (let i = 0; i < favoriteCourse.length; i += 1) {
   createFavoriteCourses.appendChild(favoriteCourse[i]);
 }
