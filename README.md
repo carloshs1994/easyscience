@@ -4,7 +4,7 @@
 
 > This is the first capstone project for the microverse program. It contains some of my experience teaching science.
 
-![screenshot](./app_screenshot.png)
+![screenshot](assets/preview.png)
 
 Additional description about the project and its features.
 
