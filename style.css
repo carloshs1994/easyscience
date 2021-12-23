@@ -13,6 +13,11 @@
   src: url(fonts/Lato/Lato-Bold.ttf);
 }
 
+@font-face {
+  font-family: latoItalic;
+  src: url(fonts/Lato/Lato-Italic.ttf);
+}
+
 body {
   margin: 0;
   padding: o;
@@ -313,23 +318,50 @@ p {
   box-shadow: 0 4px 8px 0 rgb(236 82 66 / 60%), 0 6px 20px 0 rgb(236 82 66 / 19%);
 }
 
-.card h2 {
-  color: #272a31;
-  padding-left: 10px;
-  padding-top: 5px;
-  font-size: 25px;
-}
-
 .background-card {
   width: 100%;
   height: 100%;
   background-color: #d3d3d3ab;
   border-radius: 10px;
   transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .background-card:hover {
   background-color:#d3d3d300;
+}
+
+.card .background-card h2 {
+  color: #272a31;
+  font-size: 25px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.card > .background-card > .display-while-hover {
+  display: none;
+}
+
+.card:hover > .background-card > .display-while-hover {
+  display: block;
+  font-size: 15px;
+  font-family: latoItalic;
+  width: 90%;
+  color: #272a31;
+  opacity: 0.9;
+  background-color: #ec5342e7;
+  padding: 10px;
+}
+
+.card:hover > .background-card > a.display-while-hover:hover {
+  font-size: 20px;
+  font-family: latoBold;
+  opacity: 1;
 }
 
 .button-container {

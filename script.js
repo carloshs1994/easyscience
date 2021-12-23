@@ -14,32 +14,32 @@ closeNavLink.forEach((element) => {
 const arrOfFavoriteCourses = [
   {
     title: 'Algebra 1',
-    content: 'Foundation, Solving equations, working with units, linear equations & graphs, Forms of linear equations, System of equations',
+    content: 'Content: Foundation, Solving equations, working with units, linear equations & graphs, Forms of linear equations, System of equations',
     linkToCompleteCourse: '#',
   },
   {
     title: 'Organic Chemistry',
-    content: '',
+    content: 'Content: Structure and bonding, Resonance and acid-base chemistry, Alkanes, cycloalkanes, and functional groups, Stereochemistry, Substitution and elimination reactions, Alkenes and alkynes, Alcohols, ethers, epoxides, sulfides, Conjugated systems and pericyclic reactions, Aromatic compounds, Aldehydes and ketones, Carboxylic acids and derivatives, Alpha carbon chemistry, Amines, Spectroscopy',
     linkToCompleteCourse: '#',
   },
   {
     title: 'Trigonometry',
-    content: '',
+    content: 'Content: Right triangles & trigonometry, Trigonometric functions, Non-right triangles & trigonometry, Trigonometric equations and identities',
     linkToCompleteCourse: '#',
   },
   {
     title: 'Probability',
-    content: '',
+    content: 'Content: Simple probability, Counting permutations and combinations, Random variables, Sampling distributions, Confidence intervals, Significance tests (hypothesis testing)',
     linkToCompleteCourse: '#',
   },
   {
     title: 'Precalculus',
-    content: '',
+    content: 'Content: Composite and inverse functions, Trigonometry, Complex numbers, Rational functions, Conic sections, Vectors, Matrices, Probability and combinatorics, Series, Limits and continuity',
     linkToCompleteCourse: '#',
   },
   {
     title: "Newton's laws",
-    content: '',
+    content: "Content: Newton's first law, Newton's third law and free body-diagrams, Newton's second law, Applications of Newton's second law",
     linkToCompleteCourse: '#',
   }
 ];
@@ -47,10 +47,15 @@ const arrOfFavoriteCourses = [
 const favoriteCourse = arrOfFavoriteCourses.map((element, index) => {
   const course = document.createElement('article');
   course.className = 'card';
-  course.innerHTML = `<div class="background-card"><h2>${element.title}</h2></div>`;
+  course.innerHTML = `
+  <div class="background-card">
+    <h2>${element.title}</h2>
+    <p class="display-while-hover">${element.content}</p>
+    <a class="display-while-hover" href="${element.linkToCompleteCourse}">Start this course</a>
+  </div>
+  `;
   return course;
 });
-console.log(favoriteCourse[0])
 const createFavoriteCourses = document.getElementById('courses-wrap');
 for (let i = 0; i<favoriteCourse.length; i += 1){
   createFavoriteCourses.appendChild(favoriteCourse[i]);
