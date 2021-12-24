@@ -39,7 +39,7 @@ header {
 
 nav {
   padding-left: 20px;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -81,7 +81,7 @@ nav ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 60px;
   transition: 0.5s;
   z-index: 2;
 }
@@ -501,9 +501,14 @@ textarea::placeholder {
     height: auto;
     flex-direction: row;
     background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px;
+    justify-content: space-evenly;
   }
 
-  nav ul,
   .social-network ul {
     list-style: none;
     padding: 0;
@@ -526,14 +531,14 @@ textarea::placeholder {
 
   nav ul li a {
     font-family: lato, Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   nav ul li {
     display: block;
-    opacity: 0.5;
     transition: 0.5s;
     border-bottom: none;
+    opacity: 1;
   }
 
   a:hover,
@@ -561,9 +566,10 @@ textarea::placeholder {
     display: block;
   }
 
-  .sign-up {
-    padding: 5px 12px;
-    border: 2px solid #ec5242;
+  nav ul li a.sign-up {
+    padding: 10px 20px;
+    color: #ec5242;
+    border: 5px solid #ec5242;
     background-color: #fff;
   }
 
@@ -666,5 +672,11 @@ textarea::placeholder {
 
   .author .logo {
     order: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  nav ul {
+    gap: 60px;
   }
 }
