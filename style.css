@@ -618,7 +618,6 @@ textarea::placeholder {
 
   .home-text p {
     max-width: 690px;
-    font-size: 27px;
   }
 
   .home-text h2,
@@ -752,7 +751,7 @@ textarea::placeholder {
 
   .home-text p {
     position: absolute;
-    top: 382px;
+    top: 400px;
     left: 250px;
   }
 
