@@ -18,6 +18,11 @@
   src: url(fonts/Lato/Lato-Italic.ttf);
 }
 
+@font-face {
+  font-family: latoLight;
+  src: url(fonts/Lato/Lato-Light.ttf);
+}
+
 body {
   margin: 0.0001px;
   padding: 0.0001px;
@@ -136,7 +141,7 @@ p {
   background-size: cover;
   margin: 0;
   width: 100%;
-  height: 500px;
+  height: 667px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,9 +154,9 @@ p {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  gap: 37px;
+  gap: 20px;
   padding-bottom: 20px;
 }
 
@@ -172,16 +177,35 @@ h2 {
 }
 
 .home-text h1,
+.home-text h2,
 .home-text p {
+  text-align: left;
+  width: 90%;
   max-width: 500px;
 }
 
 .home-text p {
-  width: 80%;
   color: #272a31;
   font-size: 20px;
   border: 2px solid #fff;
   padding: 5px;
+}
+
+.home-text p.light-text {
+  font-family: latoLight, Arial, Helvetica, sans-serif;
+  color: #ec5242;
+  font-size: 40px;
+  border: none;
+  width: 90%;
+}
+
+.home-text h1 {
+  font-size: 34px;
+}
+
+.home-text h2 {
+  font-family: cocogoose, Arial, Helvetica, sans-serif;
+  font-size: 28px;
 }
 
 .button {
@@ -195,14 +219,21 @@ h2 {
   text-align: center;
 }
 
+.home-text .button {
+  background-color: #ec534200;
+  color: #272a31;
+  font-size: 20px;
+  border: none;
+  width: 90%;
+  max-width: 500px;
+  padding: 0;
+  text-align: left;
+}
+
 .button:hover {
   border: 3px solid #ec5242;
   background-color: #272a31;
   box-shadow: 0 4px 8px 0 rgb(236 82 66 / 60%), 0 6px 20px 0 rgb(236 82 66 / 19%);
-}
-
-.home-text .button {
-  width: 60%;
 }
 
 .about {
@@ -590,6 +621,11 @@ textarea::placeholder {
     font-size: 27px;
   }
 
+  .home-text h2,
+  .home-text .button {
+    max-width: 700px;
+  }
+
   .about h2 {
     font-size: 46px;
     padding: 0;
@@ -694,5 +730,41 @@ textarea::placeholder {
 @media (min-width: 800px) {
   nav ul {
     gap: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-text {
+    position: relative;
+  }
+
+  .home-text p.light-text {
+    position: absolute;
+    top: 95px;
+    left: 250px;
+  }
+
+  .home-text h1 {
+    position: absolute;
+    top: 173px;
+    left: 250px;
+  }
+
+  .home-text p {
+    position: absolute;
+    top: 382px;
+    left: 250px;
+  }
+
+  .home-text h2 {
+    position: absolute;
+    top: 480px;
+    left: 250px;
+  }
+
+  .home-text .button {
+    position: absolute;
+    top: 540px;
+    left: 250px;
   }
 }
