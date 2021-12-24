@@ -70,7 +70,7 @@ strong {
 nav ul {
   position: fixed;
   top: 0;
-  left: -150%;
+  left: -110%;
   width: 100vw;
   height: 100vh;
   background-color: #272a31;
@@ -251,9 +251,9 @@ hr {
   color: #d3d3d3;
 }
 
-.author p {
-  font-size: 12px;
-  color: #d3d3d3;
+.author div p {
+  font-size: 10px;
+  color: #272a31;
 }
 
 .about div p {
@@ -474,15 +474,22 @@ textarea::placeholder {
 
 .author {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: #272a31;
+  background-color: #fff;
   padding: 20px 0;
 }
 
 .author .logo {
-  order: -1;
   display: block;
+}
+
+.author .logo a {
+  color: #272a31;
+}
+
+.author div p a {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -666,12 +673,21 @@ textarea::placeholder {
   }
 
   .author {
-    flex-direction: row;
-    justify-content: space-evenly;
+    background-color: #272a31;
   }
 
-  .author .logo {
-    order: 0;
+  .author .logo a {
+    color: #d3d3d3;
+  }
+
+  .author div p {
+    font-size: 12px;
+    color: #d3d3d3;
+  }
+
+  .author div p a {
+    display: block;
+    color: #d3d3d3;
   }
 }
 
