@@ -347,6 +347,10 @@ hr {
   padding: 30px 0;
 }
 
+.courses {
+  max-width: 1000px;
+}
+
 .math,
 .physics,
 .chemistry {
@@ -370,9 +374,9 @@ hr {
 }
 
 .card:hover {
-  border: 3px solid #ec5242;
+  border: none;
   height: 300px;
-  box-shadow: 0 4px 8px 0 rgb(236 82 66 / 60%), 0 6px 20px 0 rgb(236 82 66 / 19%);
+  box-shadow: none;
 }
 
 .background-card {
@@ -381,15 +385,11 @@ hr {
   background-color: #d3d3d3ab;
   border-radius: 10px;
   transition: 0.5s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
 }
 
 .background-card:hover {
-  background-color: #d3d3d300;
+  background-color: #fff;
 }
 
 .contact-container h2 {
@@ -401,10 +401,16 @@ hr {
 
 .card .background-card h2 {
   color: #272a31;
-  font-size: 25px;
+  font-family: latoBold, Arial, Helvetica, sans-serif;
+  font-size: 20px;
   position: absolute;
   top: 5px;
   left: 10px;
+  transition: 0.5s;
+}
+
+.card:hover > .background-card > h2 {
+  left: 33%;
 }
 
 .card > .background-card > .display-while-hover {
@@ -416,16 +422,35 @@ hr {
   font-size: 15px;
   font-family: latoItalic, Arial, Helvetica, sans-serif;
   width: 90%;
-  color: #272a31;
-  opacity: 0.9;
-  background-color: #ec5342e7;
+  color: #ec5242;
   padding: 10px;
+  text-align: left;
+  position: absolute;
+  left: 30%;
+}
+
+.card:hover > .background-card > p.display-while-hover {
+  color: #272a31;
+  font-family: lato, Arial, Helvetica, sans-serif;
+  max-width: 240px;
+  top: 60px;
+}
+
+.card:hover > .background-card > a.display-while-hover {
+  top: 30px;
 }
 
 .card:hover > .background-card > a.display-while-hover:hover {
   font-size: 20px;
   font-family: latoBold, Arial, Helvetica, sans-serif;
   opacity: 1;
+}
+
+.card:hover > .background-card > img.display-while-hover {
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
 }
 
 .button-container {
