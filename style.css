@@ -270,6 +270,34 @@ hr {
   color: #d3d3d3;
 }
 
+.contact-text p {
+  font-size: 20px;
+}
+
+.home-text .email-about-html,
+.about-html-logo p,
+.about-html-soon p,
+.about-html-logo p a {
+  color: #272a31;
+  font-family: lato, Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 80%;
+  border: none;
+  font-size: 15px;
+}
+
+.about-html-teachers p,
+.about-html-SAT p {
+  position: absolute;
+  font-family: latoBold, Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #fff;
+}
+
+.about-html-SAT p {
+  top: 62%;
+}
+
 .author div p {
   font-size: 10px;
   color: #272a31;
@@ -293,7 +321,7 @@ hr {
 
 .about div ul li {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   gap: 25px;
   background-color: #d3d3d341;
@@ -494,10 +522,6 @@ hr {
   align-items: center;
 }
 
-.contact-text p {
-  font-size: 20px;
-}
-
 .contact-form {
   width: 100%;
   height: 80%;
@@ -572,6 +596,10 @@ textarea::placeholder {
   gap: 40px;
 }
 
+.author div p a {
+  display: none;
+}
+
 .home-text .logo a {
   font-size: 50px;
 }
@@ -582,10 +610,6 @@ textarea::placeholder {
 
 .author .logo a {
   color: #272a31;
-}
-
-.author div p a {
-  display: none;
 }
 
 .home-text p.about-htlm {
@@ -626,18 +650,6 @@ textarea::placeholder {
   align-items: center;
 }
 
-.home-text .email-about-html,
-.about-html-logo p,
-.about-html-soon p,
-.about-html-logo p a {
-  color: #272a31;
-  font-family: lato, Arial, Helvetica, sans-serif;
-  text-align: center;
-  width: 80%;
-  border: none;
-  font-size: 15px;
-}
-
 .home-text a.email-about-html {
   text-decoration: underline;
 }
@@ -653,18 +665,6 @@ textarea::placeholder {
 
 .about-html-SAT img {
   width: 100%;
-}
-
-.about-html-teachers p,
-.about-html-SAT p {
-  position: absolute;
-  font-family: latoBold, Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  color: #fff;
-}
-
-.about-html-SAT p {
-  top: 62%;
 }
 
 @media (min-width: 768px) {
@@ -697,10 +697,6 @@ textarea::placeholder {
     margin: 0;
     display: flex;
     gap: 20px;
-    justify-content: space-evenly;
-  }
-
-  .social-network ul {
     width: 80%;
     justify-content: flex-end;
     align-items: center;
@@ -721,6 +717,17 @@ textarea::placeholder {
     transition: 0.5s;
     border-bottom: none;
     opacity: 1;
+  }
+
+  .about div ul li {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    height: 100%;
+  }
+
+  .about div ul li:hover {
+    border: 2px solid #fff;
   }
 
   a:hover,
@@ -796,24 +803,18 @@ textarea::placeholder {
     height: 100%;
   }
 
-  .about div ul li {
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    height: 100%;
+  .contact-text p {
+    font-size: 30px;
   }
 
-  .about div ul li:hover {
-    border: 2px solid #fff;
+  .author div p {
+    font-size: 12px;
+    color: #d3d3d3;
   }
 
   .about div ul li p {
     max-width: 90%;
     text-align: center;
-  }
-
-  .contact-text p {
-    font-size: 30px;
   }
 
   .courses,
@@ -862,17 +863,12 @@ textarea::placeholder {
     background-color: #272a31;
   }
 
-  .author .logo a {
-    color: #d3d3d3;
-  }
-
-  .author div p {
-    font-size: 12px;
-    color: #d3d3d3;
-  }
-
   .author div p a {
     display: block;
+    color: #d3d3d3;
+  }
+
+  .author .logo a {
     color: #d3d3d3;
   }
 
