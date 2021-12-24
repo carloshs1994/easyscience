@@ -55,10 +55,10 @@ strong {
 }
 
 .hamburger-menu {
-  border: 1px solid #272a31;
-  background-color: #272a3186;
   padding: 3px;
   border-radius: 3px;
+  font-size: 30px;
+  color: #272a31;
 }
 
 .hamburger-menu:hover {
