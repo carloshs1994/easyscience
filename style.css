@@ -329,7 +329,9 @@ hr {
   align-items: center;
 }
 
-.courses-container h1 {
+.courses-container h1,
+.about-html-logo h1,
+.about-html-soon h1 {
   font-family: latoBold, Arial, Helvetica, sans-serif;
   font-size: 33px;
   color: #272a31;
@@ -556,8 +558,26 @@ textarea::placeholder {
   padding: 20px 0;
 }
 
-.author .logo {
+.home-page-about-html {
+  height: 500px;
+}
+
+.author .logo,
+.home-text .logo,
+.about-html-logo .logo {
   display: block;
+}
+
+.home-text-about-html {
+  gap: 40px;
+}
+
+.home-text .logo a {
+  font-size: 50px;
+}
+
+.home-text .logo a strong {
+  font-size: 70px;
 }
 
 .author .logo a {
@@ -566,6 +586,85 @@ textarea::placeholder {
 
 .author div p a {
   display: none;
+}
+
+.home-text p.about-htlm {
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-html-logo,
+.about-html-soon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 99.9%;
+  height: 300px;
+  gap: 10px;
+  border: 1px solid #d3d3d3;
+}
+
+.about-html-soon {
+  height: 700px;
+}
+
+.about-html-soon div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-html-logo div.logo-container {
+  width: 80%;
+  height: 40%;
+  border: 1px solid #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-text .email-about-html,
+.about-html-logo p,
+.about-html-soon p,
+.about-html-logo p a {
+  color: #272a31;
+  font-family: lato, Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 80%;
+  border: none;
+  font-size: 15px;
+}
+
+.home-text a.email-about-html {
+  text-decoration: underline;
+}
+
+.about-html-teachers,
+.about-html-SAT {
+  width: 90%;
+  height: 250px;
+  max-width: 400px;
+  background-color: #ec5242;
+  position: relative;
+}
+
+.about-html-SAT img {
+  width: 100%;
+}
+
+.about-html-teachers p,
+.about-html-SAT p {
+  position: absolute;
+  font-family: latoBold, Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #fff;
+}
+
+.about-html-SAT p {
+  top: 62%;
 }
 
 @media (min-width: 768px) {
@@ -776,6 +875,15 @@ textarea::placeholder {
     display: block;
     color: #d3d3d3;
   }
+
+  .about-html-soon {
+    height: 430px;
+  }
+
+  .about-html-soon div {
+    flex-direction: row;
+    width: 700px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -805,6 +913,14 @@ textarea::placeholder {
     position: absolute;
     top: 400px;
     left: 250px;
+  }
+
+  .home-text p.about-htlm {
+    position: static;
+  }
+
+  .home-text p.email-about-html {
+    position: static;
   }
 
   .home-text h2 {
