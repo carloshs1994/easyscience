@@ -22,7 +22,7 @@ Additional description about the project and its features.
 👤 **Carlos HS**
 
 - GitHub: [@carloshs1994](https://github.com/carloshs1994)
-- Twitter: [@hscarlos_]()
+- Twitter: [@hscarlos_](https://twitter.com/hscarlos_)
 - LinkedIn: [Carlos Herver]()
 
 ## Show your support
